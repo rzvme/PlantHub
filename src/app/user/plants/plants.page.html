@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Plants</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let plant of plants">
+            {{plant.plantName}}
+            <img src="{{plant.pictureURL}}" />
+        </ion-item>
+    </ion-list>
+</ion-content>

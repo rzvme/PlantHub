@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>landing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input name="username" [(ngModel)]="regUserName"></ion-input>
+  <ion-button (click)="register()">register</ion-button>
+  <ion-input name="token" [(ngModel)]="userToken"></ion-input>
+  <ion-button (click)="login()">login</ion-button>
+</ion-content>
