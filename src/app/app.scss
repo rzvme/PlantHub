@@ -4,3 +4,23 @@
 // styles are for the entire app and not just one component. Additionally, this 
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
+    div.ion-itemContainer
+    {
+        width: 100%;
+        padding-top: 5px;
+    }
+    img
+    {
+        object-fit: cover;
+        width:100px;
+        height:100px;
+    }
+    div.textContainer
+    {
+        display: inline;
+        font-weight: bold;
+        font-size: 1.5em;
+        position: absolute;
+        top: 42px;
+        margin-left: 15px;
+    }
