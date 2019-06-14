@@ -1,1 +1,15 @@
-<div>Schedule</div>  
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Schedule</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list >
+        <ion-item *ngFor="let plant of schedule">
+            {{plant.plantName}}
+            <img src="{{plant.pictureURL}}" />
+            <ion-button *ngIf="plant.needsWater" (click)="WaterPlant(plant)">Watered!</ion-button>
+        </ion-item>
+    </ion-list>
+    
+</ion-content>
