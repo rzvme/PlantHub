@@ -4,10 +4,21 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-list>
+    <ion-list *ngIf="!createMode">
         <ion-item *ngFor="let plant of plants">
             {{plant.plantName}}
             <img src="{{plant.pictureURL}}" />
+        </ion-item>
+        <ion-item>
+            <ion-button (click)="createMode=!createMode">Add Plant</ion-button>
+        </ion-item>
+    </ion-list>
+    <ion-list *ngIf="createMode">
+        <ion-item>
+            <ion-input [(ngModel)]="newPlantName" placeholder="New Plant Name"></ion-input>
+            <ion-input [(ngModel)]="newPlantNoDaysWateringInterval" placeholder="New Plant No Days Watering Interval"></ion-input>
+            <ion-input [(ngModel)]="newPlantNotes" placeholder="New Plant Notes"></ion-input>
+            <ion-button (click)="AddPlant()">Save</ion-button>
         </ion-item>
     </ion-list>
 </ion-content>

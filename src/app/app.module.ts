@@ -15,6 +15,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { UserMainPageModule } from './user/user-main.module';
 
+import { Camera } from '@ionic-native/Camera/ngx';
+
+import { File } from '@ionic-native/File/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,7 +26,9 @@ import { UserMainPageModule } from './user/user-main.module';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Camera,
+    File
   ],
   bootstrap: [AppComponent]
 })

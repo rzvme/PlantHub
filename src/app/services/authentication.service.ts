@@ -37,11 +37,17 @@ export class AuthenticationService {
     })
   }
 
-  login() {
+  login(userKey) {
     // return this.storage.set(USER_TOKEN, 'Bearer 1234567').then(() => {
     //   this.authenticationState.next(true);
     // });
     //TODO: aici call sa iau full user based on token
+    this.api.GetAccount(userKey).subscribe((data)=>{
+      if(data["rowKey"])
+        this.storage.set(USER_TOKEN,data["rowKey"]).then(()=>{
+          this.authenticationState.next(true);
+        });
+    })
     return this.isAuthenticated();
   }
 

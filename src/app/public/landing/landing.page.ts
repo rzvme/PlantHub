@@ -16,6 +16,7 @@ export class LandingPage implements OnInit {
   }
   login() {
     // TODO: fill in code here
+    this.authService.login(this.userToken)
   }
   register() {
     this.authService.register(this.regUserName);
